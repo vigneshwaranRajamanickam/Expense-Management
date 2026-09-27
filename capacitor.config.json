@@ -1,0 +1,9 @@
+{
+  "appId": "com.finpulse.expensemanager",
+  "appName": "FinPulse",
+  "webDir": "dist/expense-tracker/browser",
+  "bundledWebRuntime": false,
+  "server": {
+    "androidScheme": "https"
+  }
+}
