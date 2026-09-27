@@ -19,7 +19,7 @@ export class ThemeService {
     } else {
       // Check system preference
       const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
-      this.setTheme(prefersDark ? 'dark' : 'dark'); // Default dark as primary
+      this.setTheme(prefersDark ? 'dark' : 'light'); // Default dark as primary
     }
   }
 
