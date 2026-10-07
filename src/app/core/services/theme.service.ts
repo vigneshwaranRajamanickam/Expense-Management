@@ -6,7 +6,7 @@ export type Theme = 'dark' | 'light';
   providedIn: 'root'
 })
 export class ThemeService {
-  readonly currentTheme = signal<Theme>('dark');
+  readonly currentTheme = signal<Theme>('light');
 
   constructor() {
     this.initTheme();
@@ -17,9 +17,8 @@ export class ThemeService {
     if (saved === 'light' || saved === 'dark') {
       this.setTheme(saved);
     } else {
-      // Check system preference
-      const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
-      this.setTheme(prefersDark ? 'dark' : 'light'); // Default dark as primary
+      // Default to light theme as initial theme
+      this.setTheme('light');
     }
   }
 

@@ -152,8 +152,11 @@ import { BiometricService } from '../../../core/services/biometric.service';
     .auth-subtitle { font-size: 0.82rem; color: var(--text-muted); }
 
     .auth-tabs {
-      display: flex; gap: 4px; padding: 4px; background: rgba(15, 23, 42, 0.5);
+      display: flex; gap: 4px; padding: 4px; background: rgb(237 239 244 / 50%);
       border-radius: var(--radius-md); border: 1px solid var(--border-color); margin-bottom: 20px;
+      [data-theme="light"] & {
+        background: #E2E8F0;
+      }
     }
     .tab-btn {
       flex: 1; padding: 8px 6px; font-size: 0.78rem; font-weight: 700; border: none; background: none;

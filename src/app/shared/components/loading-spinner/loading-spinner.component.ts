@@ -6,7 +6,9 @@ import { Component, Input } from '@angular/core';
   template: `
     <div class="spinner-container" [style.min-height]="height">
       <div class="glow-ring"></div>
-      <p class="loading-text" *ngIf="message">{{ message }}</p>
+      @if(message){
+        <p class="loading-text">{{ message }}</p>
+      }
     </div>
   `,
   styles: [`
